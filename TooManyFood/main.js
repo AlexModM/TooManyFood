@@ -1,3 +1,30 @@
+/*
+NIDE BUILD INFO:
+  dir: dev
+  target: main.js
+  files: 3
+*/
+
+
+
+// file: insruments/knife15cm.js
+
+IDRegistry.genItemID("miniKnife");
+Item.createItem("miniknife", "15cm Knife", {name:"knife15cm", meta: 0}, {stack: 1});
+
+
+
+
+// file: insruments/knife21cm.js
+
+IDRegistry.genItemID("chefKnife");
+Item.createItem("chefKnife", "Chef(21cm) Knife", {name:"knife21cm", meta: 0}, {stack: 1});
+
+
+
+
+// file: blocks/cuttingBoard.js
+
 IDRegistry.genBlockID("cuttingBoard");
 Block.createBlock("cuttingBoard", [
 {name: "test", texture: [
@@ -10,7 +37,7 @@ Block.createBlock("cuttingBoard", [
 inCreative: true}
 ]);
 
-function createCuttingBoardRender(id, idMaterial, dataMaterial) {
+function createTestRender(id, idMaterial, dataMaterial) {
 
 var render = new ICRender.Model();
 BlockRenderer.setStaticICRender (BlockID.cuttingBoard, 0, render);
@@ -23,6 +50,6 @@ model.addBox (14/16, 0/16, 7/16, 15/16, 1/16, 9/16, "planks", 0);
 
 render.addEntry(model); }
 
-reateCuttingBoardRender(BlockID.cuttingBoard, 49, 0);
+createTestRender(BlockID.cuttingBoard, 49, 0);
 
 Block.setShape(BlockID.cuttingBoard, 0, 0, 0, 1, 1, 1); 
